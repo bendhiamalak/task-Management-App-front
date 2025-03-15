@@ -1,0 +1,54 @@
+/* Style pour le conteneur des informations de type et de niveau de difficulté */
+mat-card-content div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem; /* Espacement avec le contenu suivant */
+}
+
+/* Style pour le texte de type de tâche */
+mat-card-content div p:first-child {
+    color: #ffffff; /* Texte en blanc */
+    margin: 0; /* Supprimer la marge par défaut */
+}
+
+/* Style pour le texte de niveau de difficulté */
+mat-card-content div p:last-child {
+    background-color: #cccccc; /* Fond gris clair */
+    color: #000000; /* Texte en noir pour contraster */
+    padding: 0.25rem 0.5rem; /* Padding pour un meilleur rendu */
+    border-radius: 4px; /* Coins légèrement arrondis */
+    margin: 0; /* Supprimer la marge par défaut */
+}
+
+/* Style général de la carte */
+.example-card {
+    background-color: #44474E; /* Fond gris moyen pour les cartes */
+    color: #ffffff;
+    border: 1px solid #555; /* Bordure discrète */
+    border-radius: 8px; /* Coins légèrement arrondis */
+}
+
+/* Style de l'image de la carte */
+mat-card-image {
+    height: 150px;
+    object-fit: cover; /* Garder une bonne proportion pour l'image */
+}
+
+/* Style du titre de la carte */
+mat-card-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+/* Style des boutons */
+mat-card-actions button {
+    color: #ffffff;
+    font-size: 0.9rem;
+}
+
+mat-card-actions {
+    display: flex;
+    justify-content: space-between;
+}

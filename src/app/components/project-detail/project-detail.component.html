@@ -1,0 +1,107 @@
+<div>
+  <div class="header-container">
+    <h1>{{ project.title }}</h1>
+    <mat-icon>add_box</mat-icon>
+  </div>
+
+  <div>
+    <p>{{ project.nbreCollaborateurs }} collaborators</p>
+  </div>
+
+  <h3>Project Details</h3>
+  <p>{{ project.description }}</p>
+
+  <h3>Tasks</h3>
+
+  <div class="example-container">
+    <h2>{{ toDo }}</h2>
+    <div
+      cdkDropList
+      id="todoList"
+      [cdkDropListData]="todoList"
+      [cdkDropListConnectedTo]="[
+        'inProgressList',
+        'underReviewList',
+        'completedList'
+      ]"
+      class="example-list"
+      (cdkDropListDropped)="drop($event)"
+    >
+      <div
+        *ngFor="let task of todoList; trackBy: trackById"
+        class="example-box"
+        cdkDrag
+      >
+        {{ task.title }}
+      </div>
+    </div>
+  </div>
+
+  <div class="example-container">
+    <h2>{{ inProgress }}</h2>
+    <div
+      cdkDropList
+      id="inProgressList"
+      [cdkDropListData]="inProgressList"
+      [cdkDropListConnectedTo]="[
+        'todoList',
+        'underReviewList',
+        'completedList'
+      ]"
+      class="example-list"
+      (cdkDropListDropped)="drop($event)"
+    >
+      <div
+        *ngFor="let task of inProgressList; trackBy: trackById"
+        class="example-box"
+        cdkDrag
+      >
+        {{ task.title }}
+      </div>
+    </div>
+  </div>
+
+  <div class="example-container">
+    <h2>{{ underReview }}</h2>
+    <div
+      cdkDropList
+      id="underReviewList"
+      [cdkDropListData]="underReviewList"
+      [cdkDropListConnectedTo]="['todoList', 'inProgressList', 'completedList']"
+      class="example-list"
+      (cdkDropListDropped)="drop($event)"
+    >
+      <div
+        *ngFor="let task of underReviewList; trackBy: trackById"
+        class="example-box"
+        cdkDrag
+      >
+        {{ task.title }}
+      </div>
+    </div>
+  </div>
+
+  <div class="example-container">
+    <h2>{{ completed }}</h2>
+    <div
+      cdkDropList
+      id="completedList"
+      [cdkDropListData]="completedList"
+      [cdkDropListConnectedTo]="[
+        'todoList',
+        'inProgressList',
+        'underReviewList'
+      ]"
+      class="example-list"
+      (cdkDropListDropped)="drop($event)"
+    >
+      <div
+        *ngFor="let task of completedList; trackBy: trackById"
+        class="example-box"
+        cdkDrag
+      >
+        {{ task.title }}
+      </div>
+    </div>
+  </div>
+</div>

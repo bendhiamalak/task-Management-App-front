@@ -1,0 +1,104 @@
+.container {
+  /* Vous pouvez ajouter des styles globaux pour le conteneur ici si nécessaire */
+}
+
+.dialog-title {
+  background-color: #ffffff; /* Fond blanc */
+  color: #000000; /* Texte noir */
+  
+  padding: 16px;
+  border-bottom: 1px solid #cccccc; /* Bordure grise */
+  font-size: 1.5em;
+  font-weight: bold;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1); /* Effet d'ombre pour le titre */
+}
+
+.dialog-content {
+  background-color: #ffffff; /* Fond blanc */
+  color: #000000; /* Texte noir */
+  margin-top: 30px;
+  padding: 16px;
+  
+}
+.mat-mdc-form-field{
+  margin-top: 16px;
+}
+
+/* Conteneur du formulaire */
+.form-container {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Style des champs de formulaire */
+.form-field {
+  width: 100%;
+  margin-bottom: 16px; /* Ajoute une marge en bas de chaque champ de formulaire */
+}
+
+.form-label {
+  color: #000000 !important; /* Texte noir pour les labels */
+}
+
+.form-input {
+  color: #000000 !important; /* Texte noir pour les inputs */
+  background-color: #f9f9f9; /* Fond gris clair pour les inputs */
+  border: 1px solid #cccccc; /* Bordure grise */
+  border-radius: 4px;
+  padding: 8px;
+}
+
+/* Style des boutons d'action */
+.dialog-actions {
+  background-color: #ffffff; /* Fond blanc */
+  padding: 16px;
+  border-top: 1px solid #cccccc; /* Bordure grise */
+}
+
+.action-button {
+  color: #ffffff !important; /* Texte blanc */
+  background-color: #555555 !important; /* Fond gris */
+  border-radius: 4px;
+  padding: 8px 16px;
+  margin-left: 8px;
+  transition: background-color 0.3s;
+}
+
+.action-button:hover {
+  background-color: #777777 !important; /* Fond gris plus clair au survol */
+}
+
+.cancel-button {
+  background-color: #333333 !important; /* Fond gris foncé pour le bouton Close */
+}
+
+.cancel-button:hover {
+  background-color: #555555 !important; /* Fond gris plus clair au survol */
+}
+
+.save-button {
+  background-color: #000000 !important; /* Fond noir pour le bouton Save */
+}
+
+.save-button:hover {
+  background-color: #333333 !important; /* Fond gris foncé au survol */
+}
+
+/* Style du datepicker */
+.datepicker-toggle {
+  color: #000000 !important; /* Icône noire */
+}
+
+.datepicker {
+  background-color: #ffffff; /* Fond blanc */
+  color: #000000; /* Texte noir */
+}
+
+.mat-calendar-body-cell-content {
+  color: #000000 !important; /* Texte noir */
+}
+
+.mat-calendar-body-selected {
+  background-color: #555555 !important; /* Fond gris */
+  color: #ffffff !important; /* Texte blanc */
+}

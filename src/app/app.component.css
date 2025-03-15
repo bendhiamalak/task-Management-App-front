@@ -1,0 +1,15 @@
+*{
+  background-color: #fff;
+}
+.sidenav-container {
+    height: 100vh;
+    background-color: #fff; /* Fond gris clair pour le contenu principal */
+  }
+  
+  mat-sidenav-content {
+    background-color: #fff; /* Fond gris clair pour le contenu principal */
+  }
+  
+  .content {
+    padding: 16px;
+  }

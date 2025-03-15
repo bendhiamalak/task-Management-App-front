@@ -1,0 +1,161 @@
+/* Container principal */
+.container {
+    padding: 2rem;
+    background-color: #ffffff; /* Fond gris très foncé */
+    color: #ffffff; /* Texte en blanc */
+    font-family: 'Arial', sans-serif;
+}
+
+
+.header-container {
+    display: flex; /* Active Flexbox */
+    justify-content: space-between; /* Espace entre les éléments */
+    align-items: center; /* Alignement vertical au centre */
+    padding: 10px; /* Espacement intérieur */
+    background-color: #44474E; /* Fond sombre */
+    border-radius: 8px; /* Coins arrondis */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Ombre douce */
+  }
+  
+h1 {
+    color: #000000; /* Texte en blanc */
+    margin-bottom: 1.5rem;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+h2 {
+    color:#ffffff;
+    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-top: 2rem;
+}
+
+p {
+    color: #b0b0b0; /* Texte gris clair */
+    margin-bottom: 1.5rem;
+}
+
+/* Conteneurs pour les projets et les tâches */
+.projects-container, .tasks-container {
+    margin-top: 2rem;
+    padding: 1.5rem;
+    background-color: #000000; /* Fond gris foncé */
+    border-radius: 12px; /* Coins arrondis */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Ombre subtile */
+}
+
+/* Cartes de projets et de tâches */
+.project-card, .task-card {
+    background-color: #44474E; /* Fond gris moyen */
+    border: 1px solid #44474E; /* Bordure gris foncé */
+    border-radius: 8px; /* Coins arrondis */
+    padding: 0.75rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Animation au survol */
+    width: 100%; /* Largeur maximale */
+    max-width: 300px; /* Largeur maximale des cartes */
+    margin: 0 auto; /* Centrer les cartes */
+}
+
+.project-card:hover, .task-card:hover {
+    transform: translateY(-5px); /* Légère élévation au survol */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4); /* Ombre plus prononcée */
+}
+
+/* Images dans les cartes */
+mat-card-image {
+    height: 150px;
+    object-fit: cover;
+    border-radius: 8px 8px 0 0; /* Coins arrondis uniquement en haut */
+}
+
+/* Titres des cartes */
+mat-card-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #ffffff;
+    margin-bottom: 0.5rem;
+}
+
+/* Contenu des cartes */
+mat-card-content {
+    color: #b0b0b0; /* Texte gris clair */
+    font-size: 0.9rem;
+    line-height: 1.4;
+}
+
+/* Actions des cartes (boutons) */
+mat-card-actions {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5rem 0;
+}
+
+mat-card-actions button {
+    color: #ffffff;
+    background-color: #44474E; /* Fond gris foncé pour les boutons */
+    border: none;
+    border-radius: 4px;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+mat-card-actions button:hover {
+    background-color: #666; /* Fond gris clair au survol */
+}
+
+/* Swiper Container */
+swiper-container {
+    width: 100%;
+    padding: 1rem 0;
+}
+
+swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Responsivité */
+
+/* Pour les écrans de taille moyenne (tablettes) */
+@media (max-width: 768px) {
+    .project-card, .task-card {
+        flex: 1 1 calc(50% - 1rem); /* 2 cartes par ligne */
+        max-width: calc(50% - 1rem);
+    }
+
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    h2 {
+        font-size: 1.3rem;
+    }
+}
+
+/* Pour les petits écrans (smartphones) */
+@media (max-width: 480px) {
+    .project-card, .task-card {
+        flex: 1 1 100%; /* 1 carte par ligne */
+        max-width: 100%;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    h2 {
+        font-size: 1.2rem;
+    }
+
+    .container {
+        padding: 1rem;
+    }
+
+    .projects-container, .tasks-container {
+        padding: 1rem;
+    }
+}

@@ -1,0 +1,45 @@
+
+mat-sidenav {
+    background-color: #333; /* Fond gris foncé */
+    color: #fff; /* Texte blanc */
+    width: 250px;
+  }
+  
+  mat-list {
+    padding-top: 0;
+  }
+  
+  mat-list-item {
+    color: #fff; /* Texte blanc */
+    cursor: pointer;
+  }
+  
+  mat-list-item:hover {
+    background-color: rgba(255, 255, 255, 0.1); 
+  }
+  
+  .app-title {
+    font-size: 20px;
+    font-weight: bold;
+    margin-left: 8px;
+  }
+  
+  mat-icon {
+    color: #fff; /* Icônes blanches */
+  }
+  
+  mat-divider {
+    border-top-color: rgba(255, 255, 255, 0); /* Couleur du séparateur */
+  }
+
+  .subheader-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Ajuste l'espace si nécessaire */
+    gap: 0.5rem; /* Espacement entre le titre et l'icône */
+}
+
+.black-icon {
+    color: black !important; /* Assure que l'icône reste noire */
+    cursor: pointer; /* Optionnel : curseur pointer pour indiquer que c'est cliquable */
+}

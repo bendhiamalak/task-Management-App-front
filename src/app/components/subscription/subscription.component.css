@@ -1,0 +1,36 @@
+.Subscribe-card {
+    padding: 20px;
+    max-width: 500px;
+    margin: auto;
+  }
+  
+  .full-width {
+    width: 100%;
+    margin-bottom: 16px;
+  }
+  
+  .divider {
+    margin: 20px 0;
+  }
+  
+  .role-label {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 16px;
+  }
+  
+  .radio-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+  }
+  
+  .button-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+  
+  .login-button, .subscribe-button {
+    width: 48%;
+  }

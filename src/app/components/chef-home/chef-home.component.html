@@ -1,0 +1,39 @@
+<div class="container">
+  <h1>Chef home works!</h1>
+  <p>Partie dashboarding ..</p>
+
+  <div class="projects-container">
+    <h2>Active Projects</h2>
+    <swiper-container
+      slides-per-view="3"
+      navigation="true"
+      pagination="true"
+      loop="true"
+    >
+      <swiper-slide *ngFor="let project of activeProjects" >
+        <div class="project-card" (click)="navigateToProjectDetail(project)">
+          <app-active-projet-card
+            [projet]="project"
+            
+          ></app-active-projet-card>
+        </div>
+      </swiper-slide>
+    </swiper-container>
+  </div>
+
+  <div class="tasks-container">
+    <h2>Active Tasks</h2>
+    <swiper-container
+      slides-per-view="3"
+      navigation="true"
+      pagination="true"
+      loop="true"
+    >
+      <swiper-slide *ngFor="let task of activeTasks">
+        <div class="task-card">
+          <app-active-task-card [task]="task"></app-active-task-card>
+        </div>
+      </swiper-slide>
+    </swiper-container>
+  </div>
+</div>

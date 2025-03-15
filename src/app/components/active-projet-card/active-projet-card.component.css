@@ -1,0 +1,62 @@
+/* Container principal */
+.container {
+    padding: 1rem;
+    /* Thème gris foncé */
+}
+
+.mat-card-contentp {
+    color: #ffffff;
+}
+
+h1, h2, p {
+    color: #000000;
+}
+
+.projects-container {
+    margin-top: 1rem;
+}
+
+.project-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: flex-start;
+}
+
+/* Par défaut : 3 cartes par ligne */
+.project-card {
+    flex: 1 1 calc(33.33% - 1rem); /* 3 cartes par ligne */
+    box-sizing: border-box;
+    max-width: calc(33.33% - 1rem);
+}
+
+.example-card {
+    background-color:#44474E; /* Fond gris moyen pour les cartes */
+    color: #ffffff;
+    border: 1px solid #555; /* Bordure discrète */
+    border-radius: 8px; /* Coins légèrement arrondis */
+}
+
+/* Image de la carte */
+mat-card-image {
+    height: 150px;
+    object-fit: cover; /* Garder une bonne proportion pour l'image */
+}
+
+/* Titre de la carte */
+mat-card-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+/* Style des boutons */
+mat-card-actions button {
+    color: #ffffff;
+    font-size: 0.9rem;
+}
+
+mat-card-actions{
+    display: flex;
+    justify-content: space-between;
+}

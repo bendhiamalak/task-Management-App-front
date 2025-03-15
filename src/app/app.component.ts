@@ -7,4 +7,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'todo-front';
+
+  isMenuOpen = false; 
+
+  toggleMenu() {
+    this.isMenuOpen = !this.isMenuOpen; 
+  }
 }
