@@ -1,20 +1,25 @@
 <div>
   <div class="header-container">
     <h1>{{ project.title }}</h1>
-    <mat-icon>add_box</mat-icon>
+    <div class="left-container">
+      <mat-icon>add_box</mat-icon>
+      <span>Invite</span>
+    </div>
   </div>
 
-  <div>
-    <p>{{ project.nbreCollaborateurs }} collaborators</p>
-  </div>
+  <hr />
 
   <h3>Project Details</h3>
-  <p>{{ project.description }}</p>
+  <p class="prDetail">{{ project.description }}</p>
 
   <h3>Tasks</h3>
 
   <div class="example-container">
-    <h2>{{ toDo }}</h2>
+    <div class="hder-container">
+      <h2>{{ toDo }}</h2>
+      <mat-icon (click)="openAddTask()">add_box</mat-icon>
+    </div>
+
     <div
       cdkDropList
       id="todoList"
@@ -38,7 +43,10 @@
   </div>
 
   <div class="example-container">
-    <h2>{{ inProgress }}</h2>
+    <div class="hder-container">
+      <h2>{{ inProgress }}</h2>
+    </div>
+
     <div
       cdkDropList
       id="inProgressList"
@@ -62,7 +70,10 @@
   </div>
 
   <div class="example-container">
-    <h2>{{ underReview }}</h2>
+    <div class="hder-container">
+      <h2>{{ underReview }}</h2>
+    </div>
+
     <div
       cdkDropList
       id="underReviewList"
@@ -82,7 +93,9 @@
   </div>
 
   <div class="example-container">
-    <h2>{{ completed }}</h2>
+    <div class="hder-container">
+      <h2>{{ completed }}</h2>
+    </div>
     <div
       cdkDropList
       id="completedList"

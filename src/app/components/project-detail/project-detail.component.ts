@@ -7,7 +7,8 @@ import {
   moveItemInArray,
   transferArrayItem,
 } from '@angular/cdk/drag-drop';
-
+import { MatDialog } from '@angular/material/dialog';
+import { AddTaskComponent } from '../add-task/add-task.component';
 @Component({
   selector: 'app-project-detail',
   templateUrl: './project-detail.component.html',
@@ -28,7 +29,7 @@ export class ProjectDetailComponent implements OnInit {
   underReview = StatusType.UnderReview;
   completed = StatusType.Completed;
 
-  constructor(private projectService: ProjectService) {}
+  constructor(private projectService: ProjectService, private dialog: MatDialog) {}
 
   ngOnInit(): void {
    
@@ -79,4 +80,12 @@ export class ProjectDetailComponent implements OnInit {
   trackById(index: number, task: Task): number {
     return task.id;
   }
+
+  openAddTask(){
+    const dialogRef = this.dialog.open(AddTaskComponent, {
+      width: '500px',
+      data:{task:{}}
+  })
+}
+
 }

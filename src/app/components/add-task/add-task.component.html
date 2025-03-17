@@ -1,0 +1,65 @@
+<h1>Cretae new Task</h1>
+<p>
+  <mat-form-field appearance="outline">
+    <mat-label>Task Title</mat-label>
+    <input matInput placeholder="Placeholder" />
+    <mat-hint>Hint</mat-hint>
+  </mat-form-field>
+</p>
+<p>
+  <mat-form-field appearance="outline">
+    <mat-label>Task Description</mat-label>
+    <textarea matInput></textarea>
+  </mat-form-field>
+</p>
+
+<div>
+  <mat-form-field appearance="outline">
+    <mat-label>{{ selectedStatusType }}</mat-label>
+    <mat-select [(ngModel)]="selectedStatusType">
+      <mat-option *ngFor="let type of getStatusType()" [value]="type">{{
+        type
+      }}</mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <mat-form-field appearance="outline">
+    <mat-label>{{ selectedDifficulty }}</mat-label>
+    <mat-select [(ngModel)]="selectedDifficulty">
+      <mat-option *ngFor="let level of getDifficultyLevels()" [value]="level">{{
+        level
+      }}</mat-option>
+    </mat-select>
+  </mat-form-field>
+</div>
+
+<div>
+  <mat-form-field appearance="outline">
+    <mat-label>Start Date</mat-label>
+    <input matInput [matDatepicker]="picker" />
+    <mat-hint>MM/DD/YYYY</mat-hint>
+    <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+    <mat-datepicker #picker></mat-datepicker>
+  </mat-form-field>
+
+  <mat-form-field appearance="outline">
+    <mat-label>Due Date</mat-label>
+    <input matInput [matDatepicker]="picker" />
+    <mat-hint>MM/DD/YYYY</mat-hint>
+    <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+    <mat-datepicker #picker></mat-datepicker>
+  </mat-form-field>
+</div>
+
+<mat-form-field appearance="outline">
+  <mat-label>{{ selectedTypeOfTask }}</mat-label>
+  <mat-select [(ngModel)]="selectedTypeOfTask">
+    <mat-option *ngFor="let type of getTypeOfTask()" [value]="type">{{
+      type
+    }}</mat-option>
+  </mat-select>
+</mat-form-field>
+
+<p>Ona va ajouter add collab dynamic form</p>
+
+<button>Create New Task</button>
